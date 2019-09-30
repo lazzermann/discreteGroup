@@ -10,7 +10,9 @@ private:
 	int* first, * second;
 
 public:
+
 	Group() { intializeArrays(); gameLoop(); };
+
 	Group(Plurality pl) :plur(pl) {
 		intializeArrays();
 		gameLoop();
@@ -51,10 +53,13 @@ public:
 				arr[secondIndex] = buf;
 				return;
 			}
-			throw "One of the index out of range of array";
+			throw new char[39]{ "One of the index out of range of array" };
 		}
 		catch (char* ex) {
+
 			cout << ex << endl;
+			delete[] ex;
+
 			return;
 		}
 	}
@@ -100,8 +105,10 @@ public:
 		int* arr;
 		cout << "To create permutation you need swap at least two elements in arrays from 0 to " << plur.getSize() - 1 << endl;
 		cout << "Use 1 to swap " << endl << "Use -1 to exit" << endl << "Use -2 to show array sequence now" << endl;
+		
 		cout << endl << "First array" << endl;
 		looper(first);
+
 		cout << endl << "Second array" << endl;
 		looper(second);
 
@@ -229,6 +236,7 @@ public:
 	void looper(int* arr) {
 		int buferOne = 0, buferTwo = 0, chooser = 0;
 		while (chooser != -1) {
+
 			cout << endl << "Chooser" << endl;
 			cin >> chooser;
 
@@ -241,11 +249,14 @@ public:
 				break;
 			case 1:
 				cout << "First and Second index" << endl;
-				cin >> buferOne;
-				cin >> buferTwo;
+
+					cin >> buferOne;
+					cin >> buferTwo;				
+
 				swap(arr, buferOne, buferTwo);
 				break;
 			default:
+				chooser = -1;
 				break;
 			}
 		}

@@ -1,3 +1,2 @@
-﻿  main.cpp
-C:\Users\Roman\source\repos\discreteGroup\discreteGroup\main.cpp(6,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+﻿  Group.cpp
   discreteGroup.vcxproj -> C:\Users\Roman\source\repos\discreteGroup\Debug\discreteGroup.exe
